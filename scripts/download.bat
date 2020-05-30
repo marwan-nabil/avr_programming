@@ -1,3 +1,5 @@
+:: downloads the file main.hex in build/ 
+:: into the MCU flash program memory
 @echo off
 rem		project path prefix
 set prefix=W:\avr_programming

@@ -12,4 +12,5 @@ pushd %prefix%\build
 
 avr-gcc %c_flags% %ld_flags% %c_files% -o main.out
 avr-objcopy -R .eeprom -O ihex main.out main.hex
+
 popd
