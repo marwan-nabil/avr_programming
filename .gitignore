@@ -1,17 +1,18 @@
 # directories
 build/
 .vs/
+.vscode/
 x64/
+tools/
 
 # build results
 *.exe
+*.elf
 *.out
-*_i.c
-*_p.c
-*_i.h
 *.ilk
 *.meta
 *.obj
+*.o
 *.iobj
 *.pch
 *.pdb
@@ -28,24 +29,6 @@ x64/
 *.log
 *.vspscc
 *.vssscc
-.builds
 *.pidb
 *.svclog
 *.scc
-
-# Visual C++ cache files
-ipch/
-*.aps
-*.ncb
-*.opendb
-*.opensdf
-*.sdf
-*.cachefile
-*.VC.db
-*.VC.VC.opendb
-
-# Visual Studio profiler
-*.psess
-*.vsp
-*.vspx
-*.sap

@@ -1,7 +1,7 @@
 /* port_test.c
  * The following program just keeps toggling pin 0 of port B
  */
-// #define __AVR_ATmega32__
+#define __AVR_ATmega32__
 #include <avr/io.h> // Standard include for AVR
 
 #define F_CPU 16000000UL // Crystal frequency required for delay functions

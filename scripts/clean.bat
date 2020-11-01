@@ -1,8 +1,8 @@
 @echo off
-rem		directory path prefix
-set prefix=W:\avr_programming
+rem     Cleans the output directory
 
-rem 	cd into the build directory, then clean all built stuff
-pushd %prefix%\build
+
+pushd %PROJECT_ROOT%\build
+echo INFO: deleting output files from build\
 del /Q *.o *.hex *.obj *.lst *.map 2>nul
 popd

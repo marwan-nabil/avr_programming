@@ -1,13 +1,16 @@
-:: downloads the file main.hex in build/ 
-:: into the MCU flash program memory
 @echo off
-rem		project path prefix
-set prefix=W:\avr_programming
+rem     downloads the file main.hex in build/  into the MCU flash program memory
 
 
-IF NOT EXIST %prefix%\build mkdir %prefix%\build
-pushd %prefix%\build
-
-avrdude -p atmega32 -c USBasp -U flash:w:main.hex
-
-popd
+rem     check if the build directory doesn't exist.
+rem     flash the main.hex file into the target
+if not exist %PROJECT_ROOT%\build (
+    echo ERROR: download.bat: build\ not found, please build first
+    exit
+) else (
+    pushd %PROJECT_ROOT%\build
+    echo INFO: invoking avrdude
+    avrdude -p atmega32 -c USBasp -U flash:w:main.hex
+    echo INFO: avrdude finished
+    popd
+)
